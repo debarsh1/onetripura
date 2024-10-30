@@ -6,58 +6,68 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: "Courier New", Courier, monospace;
+    background-color: #f4e7c0;
     color: #333;
+    line-height: 1.6;
 }
 
 .header {
-    background-color: #28a745;
-    color: white;
+    background-color: #800000;
+    color: #f4e7c0;
     text-align: center;
     padding: 1.5em 0;
+    border-bottom: 5px solid #000;
 }
 
 .header h1 {
-    font-size: 2em;
+    font-size: 2.5em;
+    text-shadow: 2px 2px #333;
 }
 
 .nav {
     margin-top: 1em;
+    display: flex;
+    justify-content: center;
 }
 
 .nav a {
-    color: white;
+    color: #f4e7c0;
     margin: 0 1em;
     text-decoration: none;
     font-weight: bold;
 }
 
+.nav a:hover {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
 .section {
     padding: 2em;
-    background-color: #f4f4f4;
-    border-bottom: 1px solid #ddd;
+    background-color: #fff7e6;
+    border: 2px dashed #800000;
+    margin: 2em;
 }
 
 .section h2 {
-    font-size: 1.5em;
-    margin-bottom: 0.5em;
+    font-size: 1.8em;
+    color: #800000;
+    text-shadow: 1px 1px #aaa;
 }
 
 .section p, .section ul {
     margin-top: 0.5em;
 }
 
-.tourism-gallery {
-    display: flex;
-    gap: 1em;
-    margin-top: 1em;
+.section ul li a {
+    color: #800000;
+    text-decoration: none;
 }
 
-.tourism-gallery img {
-    width: 100%;
-    max-width: 200px;
-    border-radius: 8px;
+.section ul li a:hover {
+    text-decoration: underline;
+    color: #333;
 }
 
 form {
@@ -65,6 +75,9 @@ form {
     flex-direction: column;
     max-width: 400px;
     margin: 0 auto;
+    background-color: #fdf5e6;
+    padding: 1em;
+    border: 2px solid #800000;
 }
 
 form label {
@@ -74,22 +87,25 @@ form label {
 form input, form textarea {
     padding: 0.5em;
     margin-bottom: 1em;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 1px solid #333;
+    font-family: "Courier New", Courier, monospace;
+    background-color: #f4e7c0;
 }
 
 form button {
     padding: 0.7em;
-    color: white;
-    background-color: #28a745;
+    color: #f4e7c0;
+    background-color: #800000;
     border: none;
-    border-radius: 4px;
+    border-radius: 2px;
     cursor: pointer;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: #660000;
 }
 
 .footer {
     background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
-}
+    color: #f4e7
