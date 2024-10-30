@@ -25,25 +25,60 @@ body {
     text-shadow: 2px 2px #333;
 }
 
-.nav {
-    margin-top: 1em;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+/* Sidebar Styles */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #800000;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-right: 5px solid #333;
+    font-family: "Courier New", Courier, monospace;
+    z-index: 1000; /* To ensure sidebar is on top */
 }
 
-.nav a {
-    color: #f4e7c0;
-    margin: 0 1em;
+.sidebar a {
+    padding: 10px 20px;
     text-decoration: none;
-    font-weight: bold;
+    font-size: 1.2em;
+    color: #f4e7c0;
+    display: block;
+    transition: 0.3s;
 }
 
-.nav a:hover {
+.sidebar a:hover {
     color: #ffd700;
     text-decoration: underline;
 }
 
+.open-btn {
+    font-size: 24px;
+    cursor: pointer;
+    color: #800000;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #f4e7c0;
+    padding: 5px 10px;
+    border: 2px solid #333;
+    border-radius: 3px;
+    z-index: 1001; /* To keep button above sidebar */
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #f4e7c0;
+}
+
+/* Section Styles */
 .section {
     padding: 2em;
     background-color: #fff7e6;
@@ -71,6 +106,7 @@ body {
     color: #333;
 }
 
+/* Form Styles */
 form {
     display: flex;
     flex-direction: column;
@@ -107,10 +143,65 @@ form button:hover {
     background-color: #660000;
 }
 
+/* Footer Styles */
 .footer {
     background-color: #333;
     color: #f4e7c0;
     text-align: center;
     padding: 1em 0;
     font-size: 0.9em;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .section {
+        padding: 1.5em;
+        margin: 1em;
+    }
+
+    .section h2 {
+        font-size: 1.6em;
+    }
+
+    form {
+        padding: 1em;
+    }
+
+    form input, form textarea {
+        padding: 0.5em;
+    }
+
+    .open-btn {
+        font-size: 20px;
+        padding: 4px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.8em;
+    }
+
+    .section {
+        padding: 1em;
+        margin: 0.5em;
+    }
+
+    .section h2 {
+        font-size: 1.4em;
+    }
+
+    .sidebar a {
+        font-size: 1em;
+        padding: 8px 15px;
+    }
+
+    .open-btn {
+        font-size: 18px;
+        padding: 4px 6px;
+    }
 }
